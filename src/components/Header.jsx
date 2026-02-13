@@ -10,18 +10,11 @@ import {
   Box,
   useDisclosure,
 } from "@chakra-ui/react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { BiMenuAltLeft } from "react-icons/bi";
 
 const Header = () => {
   const { isOpen, onClose, onOpen } = useDisclosure();
-  const navigate = useNavigate();
-
-  const goTo = (path) => {
-    navigate(path);
-    onClose();
-  };
-
   return (
     <>
       <Button
@@ -46,16 +39,34 @@ const Header = () => {
           </DrawerHeader>
           <DrawerBody>
             <Box display={"flex"} flexDirection={"column"} alignItems={"flex-end"} gap={"4"} w={"full"}>
-              <Button onClick={onClose} w={"full"} varient={"ghost"} colorScheme={"purple"}><Link to={'/'}>Home</Link></Button>
-              <Button onClick={onClose} w={"full"} varient={"ghost"} colorScheme={"purple"}><Link to={'/videos'}>Videos</Link></Button>
-              <Button onClick={onClose} w={"full"} varient={"ghost"} colorScheme={"purple"}><Link to={'/videos?category=free'}>Free Video</Link></Button>
-              <Button onClick={onClose} w={"full"} varient={"ghost"} colorScheme={"purple"}><Link to={'/upload'}>Upload video</Link></Button>
+              <Button as={Link} to="/" onClick={onClose} w={"full"} variant={"ghost"} colorScheme={"purple"}>
+                Home
+              </Button>
+              <Button as={Link} to="/videos" onClick={onClose} w={"full"} variant={"ghost"} colorScheme={"purple"}>
+                Videos
+              </Button>
+              <Button
+                as={Link}
+                to="/videos?category=free"
+                onClick={onClose}
+                w={"full"}
+                variant={"ghost"}
+                colorScheme={"purple"}
+              >
+                Free Video
+              </Button>
+              <Button as={Link} to="/upload" onClick={onClose} w={"full"} variant={"ghost"} colorScheme={"purple"}>
+                Upload video
+              </Button>
             </Box>
-            <Box display={"flex"} gap={"4"} pos={"absolute"} bottom={"10"}left={"0"} w={"full"} justifyContent={"space-evenly"}>
-              <Button onClick={onClose} varient={"outline"} colorScheme={"purple"} fontSize="lg"><Link to={"/login"}>Log in</Link></Button>
-              <Button onClick={onClose} varient={"outline"} colorScheme={"purple"} fontSize="lg"><Link to={"/signup"}>Sign up</Link></Button>
+            <Box display={"flex"} gap={"4"} pos={"absolute"} bottom={"10"} left={"0"} w={"full"} justifyContent={"space-evenly"}>
+              <Button as={Link} to="/login" onClick={onClose} variant={"outline"} colorScheme={"purple"} fontSize="lg">
+                Log in
+              </Button>
+              <Button as={Link} to="/signup" onClick={onClose} variant={"outline"} colorScheme={"purple"} fontSize="lg">
+                Sign up
+              </Button>
             </Box>
-
           </DrawerBody>
         </DrawerContent>
       </Drawer>
