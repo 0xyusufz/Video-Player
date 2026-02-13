@@ -1,10 +1,19 @@
 import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Box, Heading, Text } from '@chakra-ui/react'
+
+import Header from './components/Header'
+
+
 
 const App = () => {
   return (
-    <div>
-      <h1>app</h1>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
