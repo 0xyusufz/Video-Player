@@ -1,19 +1,11 @@
-import React from "react";
-import { Box, Heading, Text } from "@chakra-ui/react";
-import { useSearchParams } from "react-router-dom";
+import React from 'react'
 
 const Video = () => {
-  const [searchParams] = useSearchParams();
-  const category = searchParams.get("category");
-
   return (
-    <Box p="10" pt="20">
-      <Heading size="lg">Videos</Heading>
-      <Text mt="3" color="gray.600">
-        {category ? `Showing category: ${category}` : "Showing all videos"}
-      </Text>
-    </Box>
-  );
-};
+    <div>
+      <h1>video Player</h1>
+    </div>
+  )
+}
 
-export default Video;
+export default Video
