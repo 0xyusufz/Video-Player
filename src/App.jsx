@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Box, Heading, Text } from "@chakra-ui/react";
+// import { Box, Heading, Text } from "@chakra-ui/react";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Video from "./pages/Video";
