@@ -8,6 +8,7 @@ import Upload from "./pages/Upload";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import NotFound from './pages/NotFound'
+import Footer from "./components/Footer";
 
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/signup" element={<Signup/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };
