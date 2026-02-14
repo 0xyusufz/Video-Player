@@ -9,21 +9,22 @@ import Img4 from "../assets/4.jpg";
 import Img5 from "../assets/5.png";
 
 const headingOption = {
-  pos: "absolute",
+  position: "absolute",
+  top: ["70%", "50%"],
   left: "50%",
-  top: "50%",
-  transform: "translate(-50%,-50%)",
+  transform: "translate(-50%, -50%)",
   textTransform: "uppercase",
-  whiteSpace: "nowrap",
-  p: "4",
-  size: "4xl",
-  zIndex: "5",
+  textAlign: "center",
+  w: ["90%", "auto"],
+  px: ["3", "6"],
+  py: ["2", "4"],
+  fontSize: ["xl", "3xl", "6xl"],
+  borderRadius: "lg",
 };
 const Home = () => {
   return (
     <Box>
       <MyCarousel />
-
       <Container maxW={"container.xl"} minH={"100vh"} p={"16"}>
         <Heading
           textTransform={"uppercase"}
