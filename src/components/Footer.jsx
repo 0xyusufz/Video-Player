@@ -15,18 +15,12 @@ const Footer = () => {
             </Button>
           </Box>
         </Box>
-
         <Box display={"flex"} flexDirection={"column"} w={"full"} borderLeft={["none","1px solid white"]} borderRight={["none","1px solid white"]}>
             <Heading textTransform={"uppercase"} textAlign={"center"}>
                 Video Player
             </Heading>
             <Text textAlign={"center"}>All right reserved</Text>
         </Box>
-
-
-
-
-
         <Box display={"flex"} flexDirection={"column"} w={"full"} >
             <Heading size={"md"} textTransform={"uppercase"} textAlign={"center"} mb={"4"}>social media</Heading>
             
